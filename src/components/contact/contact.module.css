@@ -1,0 +1,84 @@
+.contact {
+  padding: 120px 24px 140px;
+  text-align: center;
+  box-shadow: 0 30px 60px -20px rgba(221, 220, 230, 0.2);
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  
+  
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--violet);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  margin-bottom: 56px;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, var(--violet), var(--pink) 55%, var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--text-primary);
+  color: var(--bg);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 36px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.arrow {
+  font-size: 16px;
+}
+
+@media (max-width: 760px) {
+  .contact {
+    padding: 80px 20px 90px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .ctaBtn {
+    padding: 15px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .heading {
+    font-size: 28px;
+  }
+}

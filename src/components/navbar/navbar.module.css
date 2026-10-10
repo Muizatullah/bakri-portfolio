@@ -1,0 +1,146 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 14, 18, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'DM Mono', monospace;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.bracket {
+  color: var(--violet);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--text-primary);
+}
+
+.ctaBtn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.ctaBtn:hover {
+  opacity: 0.9;
+}
+
+.mobileCta {
+  display: none;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.bar,
+.barOpen1,
+.barOpen2 {
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.barOpen1 {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.barOpen2 {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+@media (max-width: 760px) {
+  .desktopCta {
+    display: none;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .links {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .linksOpen {
+    max-height: 320px;
+  }
+
+  .links li {
+    width: 100%;
+  }
+
+  .links a {
+    display: block;
+    padding: 16px 24px;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobileCta {
+    display: block;
+    padding: 16px 24px;
+  }
+
+  .mobileCta .ctaBtn {
+    display: inline-block;
+  }
+}
